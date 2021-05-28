@@ -855,15 +855,16 @@ h1, h2, h3, h4, h5, h6 {
 window.onload = function() {
 var anchors = document.getElementsByTagName("a");
 var images = document.getElementsByTagName('img');
-var baseURL = "https://wagyutrk.com/?a=10298&c=122566";
+var baseURL = "https://hurricanetrk.com/?a=10298&c=114630";
+var hash = window.location.hash.substr(1);
 var eIndex = 0;
 for (var i = 0; i < anchors.length; i++) {
-    anchors[i].href = `${baseURL}&s1=${eIndex}&s2=${Math.floor(Math.random() * 524288) + 1024}`;
+    anchors[i].href = `${baseURL}&s1=${eIndex}&s2=${hash}`;
     anchors[i].setAttribute('target', '_blank');
     eIndex++;
 }
 for (var i = 0; i < images.length; i++) {
-    images[i].setAttribute('onclick', `window.open('${baseURL}&s1=${eIndex}&s2=${Math.floor(Math.random() * 524288) + 1024}')`);
+    images[i].setAttribute('onclick', `window.open('${baseURL}&s1=${eIndex}&s2=${hash}')`);
     eIndex++;
 }
 }
